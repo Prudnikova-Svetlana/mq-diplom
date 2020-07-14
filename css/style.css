@@ -6,520 +6,20 @@
 html {
 	font-size: 100%;
 }
+
 @media (min-width: 1920px) {
 
 /*для экранов больше 1920рх*/
 .pages {
-	
 	max-width: 1920px;
 	margin-right: auto;
 	margin-left: auto;
 }
 }
+
+
 /*общее условие для всех экранов*/
 @media (min-width: 320px) {
-
-.pages {
-	min-width: 320px;
-	display: flex;
-	flex-direction: column;
-
-}
-
-}
-
-/*Mobile First */
-
-@media (max-width: 640px) {
-/*Шапка сайта*/
-	.header {
-	display: block;
-	position: relative;
-	background-image: url(../images/football_767.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-color: #000;
-    background-size: cover;
-    padding-bottom: 85px;
-    padding-top: 
-	
-	}
-
-	/* маска для изображения */
-.header::before {
-    content: "";
-    opacity: 0.9;
-    background-color: #091741;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-/*Контейнер для трех строчек заголовка*/
-.title {
-    position: relative;
-    z-index: 2;
-
-	font-size: 1.75rem; /*28рх- шрифт (28/16*/
-	font-family: OpenSans, Roboto, sans-serif;
-    font-weight: 700; /*bold*/
-    font-style: normal;
-    color: #ffffff;
-    padding-bottom: 100px;
-	
-} 
-/*Три части заголовка шапки, чтобы были на трех строках*/
-.header_title_left {
-	text-transform: uppercase;
-	text-align: left;
-    padding-left: 35px; /*внутренний отступ слева*/
-    margin-bottom: 35px;
-}
-
-.header_title_center {
-
-	text-transform: uppercase;
-	text-align: left;
-	padding-left: 70px; /*внутренний отступ слева*/
-	margin-bottom: 20px;
-}
-.header_title_right {
-	
-	text-transform: uppercase;
-	text-align: left; 
-	padding-left: 70px; /*внутренний отступ слева*/
-	
-	}
-	/*Логотип*/
- .surface_logo_text {
-	display: block;
-	position: relative;
-	z-index: 2;
-	height: 45px;
-	width: 145px;
-	fill: #fff;
-	margin-right: auto;
-	margin-left: auto; 
-	padding-top: 50px;
-	padding-bottom: 130px;
-}
-/*Ссылки - общий контейнер*/
-.links {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	position: relative;
-	z-index: 3;
-   
-} 
-/*Ссылка - логотип плюс текст*/
-.link {
-	text-decoration: none;
-}
-
-/*Стилизация ссылки App Store как кнопка*/
-.link_header_app {
-	
-	padding: 10px 20px;
-	background-color: #5e42b0;
-	text-align: center; /*отцентрировала по вертикали*/
-    justify-content: center; /*отценрировала по горизонтали*/
-    box-sizing: border-box;
-    width: 90%; /*посчитала - какую часть ширины экрана будет занимать*/
-    height: 45px;
-    border-radius: 30px;
-    margin-bottom: 20px; /*внешний отступ между кнопками*/
-
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    
-	
-    
-}
-/*Контейнер для текста ссылки App Store*/
-.link_app {
-
-	display: inline-block; /*для того, чтобы на одной линии были картинка и текст*/
-	text-transform: uppercase;
-	font-size: 0.5rem;
-	font-family: OpenSans, Roboto, sans-serif;
-    font-style: normal;
-    line-height: 1.5;
-    align-self: center;
-
-    color: #ffffff;
-}
-/*Части текста ссылки,т к разный шрифт - разделила на 2 части */
-.link_text_one {
-	font-weight: 400;
-	text-align: left;
-
-}
-.link_text_two {
-	font-weight: 700;
-	text-align: left;
-}
-
-/*Иконка App Store*/
-.apple_svg {
-	display: inline-block; /*для того, чтобы на одной линии были картинка и текст*/
-	width: 25px;
-	height: 25px;
-	fill: #fff; /*чтобы менять цвет иконки- надо код svg прописать в HTML*/
-
-}
-/*Стилизация ссылки Google Play как кнопка*/
-.link_header_google {
-
-	width: 90%; /*посчитала - какую часть ширины экрана будет занимать*/
-	padding: 10px 20px;
-	background-color: #5e42b0;
-	
-	text-align: center;
-	box-sizing: border-box;
-    border-radius: 30px;
-    
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    
-    
-}
-/*Контейнер для текста ссылки Google Play*/
-.link_google {
-	display: inline-block; /*для того, чтобы на одной линии были картинка и текст*/
-	font-size: 0.5rem; /*8px шрифт - 8px/16px*/
-	font-family: OpenSans, Roboto, sans-serif;
-    font-style: normal;
-    line-height: 1.5;
-    text-transform: uppercase;
-    align-self: center;
-    color: #ffffff;
-
-}
-/*Контейнер для Иконки Google Play*/
-.google_svg {
-	display: inline-block; /*для того, чтобы на одной линии были картинка и текст*/
-	width: 25px;
-	height: 25px;
-	fill: #fff; /*чтобы менять цвет иконки- надо код svg прописать в HTML*/
-
-}
-
-/*Контейнер секции Футбол */
-.sport_football {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
- 
-}
-/*Заголовок секции Футбол - ATHLETS, и секции Баскетбол - PLAYERS*/
-.section_title {
-
-	font-size: 3.125rem; /*50px шрифт - 50/16*/
-	font-family: OpenSans, Roboto, sans-serif;
-    font-style: normal;
-    font-weight: 700; /*Bold*/
-    text-transform: uppercase; /*Заглавные буквы*/
-    color: #e7e7e7;
-    padding-left: 30px;
-    padding-top: 30px;
-   }
-
-/*Контейнер для картинки img Футболиста*/
-.footballer {
-
-	position: relative;
-	top: 60px; /*Сместила картинку вниз на 60рх*/
-	margin-right: auto; /*Картинка по центру*/
- 	margin-left: auto;
-	z-index: 5;
-	
-}
-
-/*Контейнер для цифры и заголовка статьи*/
-.numeral_title {
-	aaaline-height: 10px;
-	padding-left: 30px;
-    text-align: left;
-
-}
-
-/*Цифра около заголовка CONNECTION, COLLABORATION*/
-.numeral_athlets { 
-   display: inline-block;
- 	font-size: 0.875rem; /*14px шрифт 14/16*/
-	font-family: OpenSans, Roboto, sans-serif;
-    font-style: normal;
-    font-weight: 700; /*bold*/
-    color: #000000;
-	border-bottom: 7px solid #5e42b0;
-	
-    }
-
-/*Цифра около заголовка GROWN - ATHLETE*/
-.numeral_grown_athlete { 
-	display: inline-block;
- 	font-size: 0.875rem; /*14px шрифт 14/16*/
-	font-family: OpenSans, Roboto, sans-serif;
-    font-style: normal;
-    font-weight: 700; /*bold*/
-    color: #000000;
-	border-bottom: 7px solid #ffffff;
-}
-
-/*Цифра около заголовка GROWN*/
-.numeral_grown { 
-    display: inline-block;
- 	font-size: 0.875rem; /*14px шрифт 14/16*/
-	font-family: OpenSans, Roboto, sans-serif;
-    font-style: normal;
-    font-weight: 700; /*bold*/
-    
-    color: #8765dd;
-	border-bottom: 7px solid #ffffff;
-
-}
-
-/*Заголовок статьи CONNECTION, COLLABORATION, GROWTN*/
-.article_title {
-    display: inline-block;
- 	font-size: 1.44rem; /*Шрифт 23рх - 23/16*/
-	font-family: OpenSans, Roboto, sans-serif;
-    font-style: normal;
-    font-weight: 700; /*bold*/
-    text-transform: uppercase;
-    color: #c1c1c1;
-    padding-top: 90px;
-    margin-bottom: 35px;
-    padding-left: 10px;
-
- }
-
-/*Статья раздела секции Athlets */
-.article_athlets {
-
-    width: 100%;
-    padding-bottom: 60px;
-}
-
-/*добавила фон и цвет шрифта 3му элементу в секции*/
-.article_athlets:nth-child(3) {
-	background-color: #fafafa;
-	color: #000;
-}
-
-/*добавила фон и цвет шрифта 4му элементу в секции*/
-.article_athlets:nth-child(4) {
-	background-color: #f5f4f9;
-	color: #000;
-}
-/*добавила фон и цвет шрифта 5му элементу в секции*/
-.article_athlets:nth-child(5) {
-	background-color: #5e42b0;
-	color: #fff;
-}
-
-
-/*Текст статьи*/
-.article_text {
-	font-size: 0.94rem; /*15px шрифт 15/16*/
-	font-family: OpenSans, Roboto, sans-serif;
-    font-style: normal;
-    font-weight: 400; /*regular*/
-    display: inline-block; /*чтобы все строки текста отодвинулись на 30 рх слева*/
-    text-align: left;
-    padding-left: 30px;
-
-}
-
- .sport_basketball {
-	width: 100%;
-	
- }
- 
-/*Статья раздела секции Players */
-.article_players {
- 
-    padding-bottom: 60px;
-}
-
- /*Контейнер для картинки Баскетболиста*/
- .basketballer {
- 	position: relative;
-	z-index: 5;
-	top: 60px;
- 	margin-right: auto;
- 	margin-left: auto;
- 	
-
- }
-
- /*добавила фон и цвет шрифта 3му элементу в секции*/
-.article_players:nth-child(3) {
-	background-color: #fafafa;
-	color: #000;
-}
- 
- /*добавила фон и цвет шрифта 4му элементу в секции*/
-.article_players:nth-child(4) {
-	background-color: #f5f4f9;
-	color: #000;
-}
-/*добавила фон и цвет шрифта 5му элементу в секции*/
-.article_players:nth-child(5) {
-	background-color: #090c35;
-	color: #fff;
-}
-
- /*Цифра около заголовка CONNECTION, COLLABORATION*/
- .numeral_players {
- 	display: inline-block;
- 	font-size: 0.875rem;
-	font-family: OpenSans, Roboto, sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #000000;
-	border-bottom: 7px solid #5e42b0;
- }
-
-/*Фото перед BE ACTIVE*/
-.article_be_active {
-
-   padding-bottom: 90px;
- }
-/*Заголовок статьи BE ACTIVE, FIND CONTACT, WORK IT*/
-.article_title_active {
-
- 	font-size: 1.44rem; /*Шрифт 23рх - 23/16*/
-	font-family: OpenSans, Roboto, sans-serif;
-    font-style: normal;
-    font-weight: 700; /*bold*/
-    text-transform: uppercase;
-    color: #c1c1c1;
-    padding-top: 40px;
-    margin-bottom: 35px;
-    padding-left: 30px;
- }
-
- /*Контейнер для Цифры около заголовков Be_active, Find contact, Work it*/
-.numeral_active {
- 	display: flex;
- 	background-color: #5e42b0;
- 	justify-content: center;
- 	align-items: center;
-    position: relative;
-    left: 20px;
-    bottom: 55px; /*70px-15px*/
- 	width: 70px;
- 	height: 70px;
- }
-
- /*Цифра около заголовков Be_active, Find contact, Work it*/
- .numeral {
- 	font-size: 0.875rem; /*14px шрифт 14/16*/
-	font-family: OpenSans, Roboto, sans-serif;
-    font-style: normal;
-    font-weight: 700; /*bold*/
- 	text-transform: uppercase;
-    color: #ffffff;
-	border-bottom: 7px solid #fafafa;
- 	
- }
-
-/*Фото перед FIND-CONTACT*/
-.article_find_contact {
-	width: 100vw;
-    padding-bottom: 90px;
-}
-
-/*Фото перед WORK IT*/
- .article_work_it {
-    padding-bottom: 90px;
- 	
- }
-/*Контейнер для футера */
-	.footer {
-	position: relative;
-	width: 100%;
-	background-image: url(../images/game_767.jpg);
-	background-repeat: no-repeat;
-    background-position: center center;
-    background-color: #000000;
-    background-size: cover;
-}
-
-/*Маска для футера*/
-.footer::before {
-	content: "";
-	position: absolute;
-    background-color: #091741;
-    opacity: 0.9;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
-/*Логотип - стрелка с текстом для Футера*/
- .surface_logo_text_footer {
-	display: block;
-	position: relative;
-	z-index: 2;
-	height: 45px;
-	width: 145px;
-	fill: #fff;
-	margin-right: auto;
-	margin-left: auto; 
-	padding-top: 90px;
-	padding-bottom: 25px;
-}
-
-/*Логотип-стрелка для Футера*/
-.surface_logo {
-	display: block;
-	position: relative;
-	z-index: 3;
-	height: 80px;
-	width: 80px;
-	background-color: #53399f;
-	box-sizing: border-box;
-	border-radius: 10%;
-	padding: 20px 15px;
-	fill: #ffffff;
-	margin-right: auto;
-	margin-left: auto;
-	margin-top: 100px;
-}
-
-/*Заголовок футера - контейнер из 2х частей*/
-.title_footer {
-	display: flex;
-	flex-direction: column;
-    align-items: center;
-    line-height: 30px;
-	position: relative;
-	z-index: 2; 
-	font-family: OpenSans, Roboto, sans-serif;
-    font-style: normal;
-    color: #ffffff;
-    text-transform: uppercase;
-    margin-top: 60px;
-    margin-bottom: 80px;
-}
-
-/*1я часть заголовка Футера*/
-.footer_title_one {
-font-size: 1.75rem; /*50px шрифт 50/16*/
-font-weight: 700;
-}
-
-/*2я часть заголовка Футера*/
-.footer_title_two {
-font-size: 0.875rem; /*14px шрифт 14/16*/
-font-weight: 400;
-}
 
 /*Подключение шрифтов*/
 @font-face {
@@ -548,65 +48,1582 @@ font-weight: 400;
     font-style: normal;
 }
 
+.pages {
+	min-width: 320px;
+	max-width: 100vw;
+	display: flex;
+	flex-direction: column;
+}
+
+/*Шапка сайта*/
+	.header {
+    display: block;
+	position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #000;
+    background-size: cover;
+}
+
+/* маска для изображения */
+.header::before {
+    content: "";
+    opacity: 0.9;
+    background-color: #091741;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/*Логотип*/
+ .surface_logo_text {
+    display: block;
+	position: relative;
+	z-index: 2;
+    fill: #fff;
+	margin-right: auto;
+	margin-left: auto; 
+ }
+
+
+/*Контейнер для двух строчек заголовка*/
+.title {
+    position: relative;
+    z-index: 2;
+    
+}
+h1 {
+	font-family: OpenSans, Roboto, sans-serif;
+    font-weight: 700; /*bold*/
+    font-style: normal;
+	color: #ffffff;
+	text-transform: uppercase;
+}
+
+/*Ссылки - общий контейнер*/
+.links {
+	display: flex;
+    position: relative;
+	z-index: 3;
+}
+
+/*Стилизация ссылки App Store как кнопка*/
+.link_header_app {
+    display: flex;
+	justify-content: center; /*отцентрировала по горизонтали*/
+	align-items: center; /*отцентрировала по вертикали*/
+	background-color: #5e42b0;
+	text-decoration: none;
+    box-sizing: border-box;
+    
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+/*Контейнер для текста ссылки App Store*/
+.link_app {
+	display: inline-block; /*для того, чтобы на одной линии были картинка и текст*/
+	vertical-align: middle;
+	text-transform: uppercase;
+	font-family: OpenSans, Roboto, sans-serif;
+    font-style: normal;
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+/*Части текста ссылки,т к разный шрифт - разделила на 2 части */
+.link_text_one {
+	text-align: left;
+}
+
+/*Части текста ссылки,т к разный шрифт - разделила на 2 части */
+.link_text_two {
+	text-align: left;
+}
+
+/*Иконка App Store*/
+.apple_svg {
+	vertical-align: middle;
+	display: inline-block; /*для того, чтобы на одной линии были картинка и текст*/
+	fill: #fff; /*чтобы менять цвет иконки- надо код svg прописать в HTML и там же убрать fill!*/
+}
+
+/*Стилизация ссылки Google Play как кнопка*/
+.link_header_google {
+	display: flex;
+	justify-content: center; /*отцентрировала по горизонтали*/
+	align-items: center; /*отцентрировала по вертикали*/
+	background-color: #5e42b0;
+	text-align: center;
+	box-sizing: border-box;
+	text-decoration: none;
+	
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/*Контейнер для текста ссылки Google Play*/
+.link_google {
+	display: inline-block; /*для того, чтобы на одной линии были картинка и текст*/
+	vertical-align: middle;
+	font-family: OpenSans, Roboto, sans-serif;
+    font-style: normal;
+    line-height: 1.5;
+    text-transform: uppercase;
+    align-self: center;
+    color: #ffffff;
+}
+
+/*Контейнер для Иконки Google Play*/
+.google_svg {
+	display: inline-block; /*для того, чтобы на одной линии были картинка и текст*/
+	vertical-align: middle;
+	fill: #fff; /*чтобы менять цвет иконки- надо код svg прописать в HTML*/
+}
+
+/*Контейнер секции Футбол */
+.sport_football {
+	display: flex;
+	
+}
+	/*Заголовок секции Футбол - ATHLETS*/
+.section_title_athlets {
+	font-family: OpenSans, Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 700; /*Bold*/
+    text-transform: uppercase; /*Заглавные буквы*/
+    color: #e7e7e7;
+   }
+
+/*Контейнер для картинки Футболиста*/
+.footballer {
+   z-index: 5;
+}
+
+/*Цифра около заголовка CONNECTION, COLLABORATION*/
+.numeral_athlets { 
+    display: inline-block;
+	font-family: OpenSans, Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 700; /*bold*/
+    color: #000000;
+    }
+
+/*Цифра около заголовка GROWN - ATHLETE*/
+.numeral_grown_athlete { 
+	display: inline-block;
+	font-family: OpenSans, Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 700; /*bold*/
+    color: #000000;
+}
+
+/*Цифра около заголовка GROWN*/
+.numeral_grown { 
+    display: inline-block;
+	font-family: OpenSans, Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 700; /*bold*/
+    color: #8765dd;
+}
+
+/*Заголовок статьи CONNECTION, COLLABORATION, GROWTN*/
+.article_title {
+    display: inline-block;
+	font-family: OpenSans, Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 700; /*bold*/
+    text-transform: uppercase;
+    color: #c1c1c1;
+ }
+
+/*Текст статьи*/
+.article_text {
+	font-family: OpenSans, Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 400; /*regular*/
+}
+
+.sport_basketball {
+	display: flex;
+	flex-direction: column;
+ }
+
+	/*Заголовок секции Баскетбол - PLAYERS*/
+.section_title_players {
+	font-family: OpenSans, Roboto, sans-serif;
+	font-style: normal;
+	font-weight: 700; /*Bold*/
+	text-transform: uppercase; /*Заглавные буквы*/
+	color: #e7e7e7;
+}
+
+ /*Заголовок статьи CONNECTION, COLLABORATION, GROWTN*/
+.article_title_players {
+	display: inline-block;
+	font-family: OpenSans, Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 700; /*bold*/
+    text-transform: uppercase;
+    color: #c1c1c1;
+	text-transform: uppercase;
+ }
+
+ /*Контейнер для картинки Баскетболиста*/
+ .basketballer {
+	z-index: 5;
+ }
+
+ /*Цифра около заголовка CONNECTION, COLLABORATION*/
+ .numeral_players {
+ 	display: inline-block;
+	font-family: OpenSans, Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000000;
+ }
+
+/*Текст статьи*/
+.article_text_players {
+	font-family: OpenSans, Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 400; /*regular*/
+ }
+
+ /*Текст статьи*/
+ .article_text_active {
+	font-family: OpenSans, Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 400; /*regular*/
+ }
+
+/*Цифра около заголовков Be_active, Find contact, Work it*/
+.numeral {
+   font-family: OpenSans, Roboto, sans-serif;
+   font-style: normal;
+   font-weight: 700; /*bold*/
+   text-transform: uppercase;
+   color: #ffffff;
+}
+
+/*Статья BE ACTIVE*/
+.article_be_active {
+	max-width: 100%;
+	position: relative;
+  }
+ 
+ /*Заголовок статьи BE ACTIVE, FIND CONTACT, WORK IT*/
+ .article_title_active {
+	 font-family: OpenSans, Roboto, sans-serif;
+	 font-style: normal;
+	 font-weight: 700; /*bold*/
+	 text-transform: uppercase;
+	 color: #c1c1c1;
+  }
+ 
+  /*Контейнер ФИОЛЕТОВЫЙ КВАДРАТ или ПРЯМОУГОЛЬНИК для Цифры около заголовков Be_active, Find contact, Work it*/
+ .numeral_active {
+	  display: flex;
+	  background-color: #5e42b0;
+	  justify-content: center;
+	  align-items: center;
+	  position: absolute;
+  }
+ 
+  /*Цифра около заголовков Be_active, Find contact, Work it*/
+  .numeral {
+	 font-family: OpenSans, Roboto, sans-serif;
+	 font-style: normal;
+	 font-weight: 700; /*bold*/
+	 text-transform: uppercase;
+	 color: #ffffff; 
+  }
+  
+ /*Статья FIND-CONTACT*/
+ .article_find_contact {
+	 position: relative; 
+ }
+ 
+ /*Статья WORK IT*/
+  .article_work_it {
+	 position: relative; 
+  }
+ 
+ /*Контейнер для футера */
+	 .footer {
+	 position: relative;
+	 width: 100%;
+	 background-repeat: no-repeat;
+	 background-position: center center;
+	 background-color: #000000;
+	 background-size: cover;
+ }
+ 
+ /*Маска для футера*/
+ .footer::before {
+	 content: "";
+	 position: absolute;
+	 background-color: #091741;
+	 opacity: 0.9;
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 left: 0;
+ }
+ 
+ /*Логотип-стрелка для Футера*/
+ .surface_logo {
+	 display: block;
+	 position: relative;
+	 z-index: 3;
+	 background-color: #53399f;
+	 box-sizing: border-box;
+	 fill: #ffffff;
+	 margin-right: auto;
+	 margin-left: auto;
+ }
+ 
+ /*Заголовок футера - контейнер из 2х частей*/
+ .title_footer {
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+	 position: relative;
+	 z-index: 2; 
+	 font-family: OpenSans, Roboto, sans-serif;
+	 font-style: normal;
+	 color: #ffffff;
+	 text-transform: uppercase; 
+ }
+ 
+ /*1я часть заголовка Футера*/
+ .footer_title_one {
+	font-family: OpenSans, Roboto, sans-serif;
+	font-style: normal;
+	font-weight: 700; /*bold*/
+	color: #ffffff;
+	text-transform: uppercase;
+ }
+ 
+ /*2я часть заголовка Футера*/
+ .footer_title_two {
+	font-family: OpenSans, Roboto, sans-serif;
+	font-style: normal;
+	font-weight: 400; /*regular*/
+	color: #ffffff;
+	text-transform: uppercase;
+ }
+ 
+ /*Логотип - стрелка с текстом для Футера*/
+ .surface_logo_text_footer {
+	display: block;
+	position: relative;
+	z-index: 2;
+	fill: #fff;
+	margin-right: auto;
+	margin-left: auto; 
+}
+
+}
+
+/************************************************************************************************/
+
+/*Mobile First */
+/*Экраны до 640рх*/
+
+@media (max-width: 640px) {
+/*Шапка сайта*/
+	.header {
+	background-image: url(../images/football_767.jpg);
+	}
+
+/*Контейнер для двух строчек заголовка*/
+.title {
+	padding-bottom: 100px; /* нижний внутренний отступ между заголовоком и ссылками*/
+} 
+
+h1 {
+	font-size: 1.75rem; /*шрифт28px-  28/16 */
+}
+
+/*Две части заголовка шапки*/
+.header_title_left { /*h1*/
+    padding-left: 30px; /*внутренний отступ слева*/
+}
+
+.header_title_right { /*span*/
+	display: block;
+	padding-left: 40px; /*внутренний отступ слева*/	
+	}
+
+	/*Логотип*/
+ .surface_logo_text {
+	height: 45px;
+	width: 145px;
+	margin-top: 50px; /*внешний оступ сверху от логотипа*/
+	margin-bottom: 130px; /*внешний отступ снизу от логотипа*/
+}
+
+/*Ссылки - общий контейнер*/
+.links {
+	flex-direction: column;
+    align-items: center;
+    margin-bottom: 90px;
+} 
+
+/*Стилизация ссылки App Store как кнопка*/
+.link_header_app {	
+	border-radius: 30px;
+	margin-bottom: 20px; /*внешний отступ между кнопками*/
+    width: 90%; /*посчитала - какую часть ширины экрана будет занимать*/
+    height: 45px;
+}
+
+/*Контейнер для текста ссылки App Store*/
+.link_app {
+	font-size: 0.5rem;
+	margin-left: 10px;
+}
+
+/*Части текста ссылки,т к разный шрифт - разделила на 2 части */
+.link_text_one {
+	font-weight: 400;
+}
+
+.link_text_two {
+	font-weight: 700;
+	}
+
+/*Иконка App Store*/
+.apple_svg {
+	width: 25px;
+	height: 25px;
+}
+
+/*Стилизация ссылки Google Play как кнопка*/
+.link_header_google { /*класс задала тегу а, чтобы вся кнопка была кликабельна*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 30px;
+    height: 45px;
+	width: 90%; /*посчитала - какую часть ширины экрана будет занимать*/
+}
+
+/*Контейнер для текста ссылки Google Play*/
+.link_google {
+    font-size: 0.5rem;
+	margin-left: 10px;
+}
+/*Контейнер для Иконки Google Play*/
+.google_svg {
+	width: 25px;
+	height: 25px;
+}
+
+/*Контейнер секции Футбол */
+.sport_football {
+	flex-direction: column;
+	position: relative; /*чтобы футболист прижался к секции с заголовком */
+	width: 100%;
+}
+
+/*Заголовок секции Футбол - ATHLETS*/
+.section_title_athlets {
+	font-size: 3.125rem; /*50px шрифт - 50/16*/
+    padding-left: 30px;
+	padding-top: 30px;
+	padding-bottom: 240px;
+   }
+
+/*Контейнер для картинки img Футболиста*/
+.footballer {
+    display: flex;
+	position: absolute; /*здесь абсолюте , а там, где должен прижаться - д б релативе */
+	top: 115px; /*Сместила картинку вниз на 115рх*/
+	left: calc((100% - 192px)/2); /*192px это ширина картинки футболиста, чтобы посередине 
+	расположен был, составила такую формулу */
+
+}	
+
+/*Контейнер для цифры и заголовка статьи*/
+.numeral_title {
+	padding-left: 30px;
+    text-align: left;
+}
+
+/*Цифра около заголовка CONNECTION, COLLABORATION*/
+.numeral_athlets { 
+	vertical-align: super;
+    display: inline-block;
+    margin-right: 5px;
+	font-size: 0.875rem; /*14px шрифт 14/16*/
+	margin-right: 10px;
+	border-bottom: 7px solid #5e42b0;
+    }
+
+/*Цифра около заголовка GROWN - ATHLETE*/
+.numeral_grown_athlete { 
+	display: inline-block;
+	vertical-align: super;
+ 	font-size: 0.875rem; /*14px шрифт 14/16*/
+	border-bottom: 7px solid #ffffff;
+	margin-right: 10px;
+}
+
+/*Цифра около заголовка GROWN*/
+.numeral_grown { 
+	display: inline-block;
+	vertical-align: super;
+ 	font-size: 0.875rem; /*14px шрифт 14/16*/
+	border-bottom: 7px solid #ffffff;
+	margin-right: 10px;
+}
+
+/*Заголовок статьи CONNECTION, COLLABORATION, GROWTN*/
+.article_title {
+    display: inline-block;
+ 	font-size: 1.44rem; /*Шрифт 23рх - 23/16*/
+    padding-top: 80px;
+    margin-bottom: 35px;
+ }
+
+/*Статья раздела секции Athlets */
+.article_athlets {
+    width: 100%;
+    padding-bottom: 60px;
+}
+
+/*добавила фон и цвет шрифта 3му элементу в секции*/
+.article_athlets:nth-child(2) {
+	background-color: #fafafa;
+	color: #000;
+}
+
+/*добавила фон и цвет шрифта 4му элементу в секции*/
+.article_athlets:nth-child(3) {
+	background-color: #f5f4f9;
+	color: #000;
+}
+/*добавила фон и цвет шрифта 5му элементу в секции*/
+.article_athlets:nth-child(4) {
+	background-color: #5e42b0;
+	color: #fff;
+}
+
+/*Текст статьи*/
+.article_text {
+	font-size: 0.94rem; /*15px шрифт 15/16*/
+	padding-left: 30px;
+	padding-right: 30px;
+}
+/*Контейнер секции Баскетбол */
+.sport_basketball {
+	display: flex;
+	flex-direction: column;
+	position: relative; /*чтобы баскетболист прижался к секции с заголовком */
+	width: 100%;
+	}
+
+ /*Заголовок секции Баскетбол - PLAYERS*/
+.section_title_players {
+	font-size: 3.125rem; /*50px шрифт - 50/16*/
+    padding-left: 30px;
+	padding-top: 30px;
+	padding-bottom: 240px;
+   }
+
+.article_title_players {
+	display: inline-block;
+	font-size: 1.44rem; /*Шрифт 23рх - 23/16*/
+    padding-top: 90px;
+    margin-bottom: 35px;
+}
+ 
+/*Статья раздела секции Players */
+.article_players {
+    padding-bottom: 60px;
+}
+
+/*добавила фон и цвет шрифта 3му элементу в секции*/
+.article_players:nth-child(3) {
+	background-color: #fafafa;
+	color: #000;
+}
+ 
+ /*добавила фон и цвет шрифта 4му элементу в секции*/
+.article_players:nth-child(4) {
+	background-color: #f5f4f9;
+	color: #000;
+}
+/*добавила фон и цвет шрифта 5му элементу в секции*/
+.article_players:nth-child(5) {
+	background-color: #090c35;
+	color: #fff;
+}
+
+
+/*Текст статьи*/
+.article_text_players {
+	font-size: 0.94rem; /*15px шрифт 15/16*/
+    padding-right: 30px;
+    padding-left: 30px;
+}
+ /*Контейнер для картинки Баскетболиста*/
+ .basketballer {
+	display: flex;
+	position: absolute;
+	top: 120px; /*Сместила картинку вниз на 120рх*/
+	left: calc((100% - 302px)/2); /*302px это ширина картинки , баскетболиста, чтобы посередине 
+	расположен был составила такую формулу */
+ 	
+ }
+
+ /*добавила фон и цвет шрифта 3му элементу в секции*/
+.article_players:nth-child(3) {
+	background-color: #fafafa;
+	color: #000;
+}
+ 
+ /*добавила фон и цвет шрифта 4му элементу в секции*/
+.article_players:nth-child(4) {
+	background-color: #f5f4f9;
+	color: #000;
+}
+/*добавила фон и цвет шрифта 5му элементу в секции*/
+.article_players:nth-child(5) {
+	background-color: #090c35;
+	color: #fff;
+}
+
+/*Контейнер для цифры и заголовка статьи*/
+ .numeral_title_players {	
+	 padding-left: 30px;
+	 text-align: left;
+ }
+
+ /*Цифра около заголовка CONNECTION, COLLABORATION*/
+ .numeral_players {
+	 display: inline-block;
+	vertical-align: super;
+ 	font-size: 0.875rem;
+	font-family: OpenSans, Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000000;
+	border-bottom: 7px solid #5e42b0;
+	margin-right: 10px;
+ }
+
+/*Фото перед FIND-CONTACT*/
+.photo_find_contact {
+	max-width: 100vw;
+}
+
+
+/*Статья BE ACTIVE*/
+.article_be_active {
+   max-width: 100%;
+   position: relative; /*чтобы прижать футболиста к этому разделу*/
+   padding-bottom: 90px;
+   padding-left: 30px;
+ }
+
+/*Заголовок статьи BE ACTIVE, FIND CONTACT, WORK IT*/
+.article_title_active {
+ 	font-size: 1.44rem; /*Шрифт 23рх - 23/16*/
+	font-family: OpenSans, Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 700; /*bold*/
+    text-transform: uppercase;
+    color: #c1c1c1;
+    padding-top: 40px;
+    margin-bottom: 35px;
+    padding-left: 30px;
+ }
+
+ /*Контейнер для Цифры около заголовков Be_active, Find contact, Work it*/
+.numeral_active {
+	top: -50px; /*сместила квадрат вверх так - как по макету расположен*/
+	left: 20px; /*сместила квадрат влево так - как по макету расположен*/
+ 	width: 70px;
+ 	height: 70px;
+ }
+
+ /*Контейнер для Цифры около заголовков Be_active, Find contact, Work it*/
+.numeral_contact {
+	top: -50px; /*сместила квадрат вверх так - как по макету расположен*/
+	left: 20px; /*сместила квадрат влево так - как по макету расположен*/
+ 	width: 70px;
+ 	height: 70px;
+ }
+
+ /*Цифра около заголовков Be_active, Find contact, Work it*/
+ .numeral {
+ 	font-size: 0.875rem; /*14px шрифт 14/16*/
+	border-bottom: 7px solid #fafafa;
+ }
+ 
+
+/*Статья FIND-CONTACT*/
+.article_find_contact {
+	position: relative;
+	padding-bottom: 90px;
+	padding-left: 30px;
 }
 
 
 
+/*Статья WORK IT*/
+ .article_work_it {
+	position: relative;
+	padding-bottom: 90px;
+	padding-left: 30px;
+ }
 
+/*Контейнер для футера */
+	.footer {
+	position: relative;
+	width: 100%;
+	background-image: url(../images/game_767.jpg);
+	background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #000000;
+    background-size: cover;
+}
 
+/*Маска для футера*/
+.footer::before {
+	content: "";
+	position: absolute;
+    background-color: #091741;
+    opacity: 0.9;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
 
+/*Логотип-стрелка для Футера*/
+.surface_logo {
+	display: block;
+	position: relative;
+	z-index: 3;
+	height: 80px;
+	width: 80px;
+	background-color: #53399f;
+	box-sizing: border-box;
+	border-radius: 10%;
+	padding: 20px 15px;
+	fill: #ffffff;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 100px;
+}
 
-aaa@media (min-width: 641px) and (max-width: 960px) {
+/*Заголовок футера - контейнер из 2х частей*/
+.title_footer {	
+    line-height: 30px;
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+
+/*1я часть заголовка Футера*/
+.footer_title_one {
+font-size: 1.75rem; /*50px шрифт 50/16*/
+font-weight: 700;
+}
+
+/*2я часть заголовка Футера*/
+.footer_title_two {
+font-size: 0.875rem; /*14px шрифт 14/16*/
+font-weight: 400;
+}
+
+/*Логотип - стрелка с текстом для Футера*/
+.surface_logo_text_footer {
+	height: 45px;
+	width: 145px;
+	padding-top: 90px;
+	padding-bottom: 25px;
+}
+
+}
+
+/*******************************************************************/
+
+/*Экраны от 641рх до 960рх*/
+
+@media (min-width: 641px) and (max-width: 960px) {
 .header {
 	background-image: url(../images/football_1280.jpg);
 	}
 
+/*Контейнер для двух строчек заголовка*/
+.title {
+ padding-bottom: 300px; /* нижний внутренний отступ между заголовоком и ссылками*/
+}
+
+h1 {
+	font-size: 4rem; /*шрифт 64px-  64/16 */
+}
+
+/*Две части заголовка шапки*/
+.header_title_left {  /*h1*/
+    padding-left: 75px; /*внутренний отступ слева*/
+}
+.header_title_right { /*span*/
+	display: block;
+	padding-left: 100px; /*внутренний отступ слева*/
+	}
+
+/*Логотип*/
+ .surface_logo_text {
+    height: 70px;
+	width: 215px;
+	margin-top: 65px;
+	margin-bottom: 300px;
+}
+
+/*Ссылки - общий контейнер*/
+.links {
+	flex-direction: row;
+	justify-content: center;
+	margin-bottom: 90px;
+	margin-left: auto;
+	margin-right: auto;
+
+} 
+
+/*Стилизация ссылки App Store как кнопка*/
+.link_header_app {
+	border-radius: 40px;
+	margin-right: 50px; /*внешний отступ между кнопками*/
+    height: 85px;
+    width: 315px;
+}
+
+/*Контейнер для текста ссылки App Store*/
+.link_app {
+	font-size: 0.875rem;
+	margin-left: 35px;
+}
+
+/*Части текста ссылки,т к разный шрифт - разделила на 2 части */
+.link_text_one {
+	font-weight: 200; /*Light*/
+}
+
+.link_text_two {
+	font-weight: 700; /*Bold*/
+	}
+
+/*Иконка App Store*/
+.apple_svg {
+	width: 40px;
+	height: 45px;
+}
+
+/*Стилизация ссылки Google Play как кнопка*/
+.link_header_google {
+	border-radius: 40px;
+	height: 85px;
+	width: 315px;
+}
+
+/*Контейнер для текста ссылки Google Play*/
+.link_google {
+	font-size: 0.875rem;
+	margin-left: 35px;
+}
+
+/*Контейнер для Иконки Google Play*/
+.google_svg {
+	width: 50px;
+	height: 52px;
+}
 .sport_football {
-	background-image: url(../images/footballer_497.png);
-	
+	z-index: 3;
+	position: relative; /*чтобы футболист прижался к секции с заголовком */
+	max-width: 100vw;
+}
+
+/*Заголовок секции Футбол - ATHLETS*/
+.section_title_athlets {
+	font-size: 5rem; /*80px шрифт - 80/16*/
+	padding-left: calc(100% - 63vw); /*63% посчитала сколько занимает блок с заголовком для планшетных экранов*/
+	padding-top: 85px;
+}
+
+/*Контейнер для картинки img Футболиста*/
+.footballer {
+	margin-right: calc(100% - 37vw); /*37% посчитала сколько занимает картинка с футболистом для планшетных экранов*/
+	position: absolute;
+	left: -160px;
+	top: 130px;
+}
+
+/*Заголовок статьи CONNECTION, COLLABORATION, GROWTN*/
+.article_title {
+	display: inline-block;
+	font-size: 2rem; /*Шрифт 32рх - 32/16*/
+	padding-top: 40px;
+	padding-bottom: 35px;
+ }
+
+/*Контейнер для цифры и заголовка статьи*/
+.numeral_title {	
+	display: flex;
+	justify-content: flex-start;
+	padding-left: calc(100% - 63vw);
+}
+
+/*Цифра около заголовка CONNECTION, COLLABORATION*/
+.numeral_athlets { 
+	display: inline-block;
+	vertical-align: super;
+	margin-right: 25px;
+	font-size: 1.125rem; /*18px шрифт 18/16*/
+	border-bottom: 8px solid #5e42b0;
+	 }
+ 
+/*Текст статьи*/
+.article_text {
+	display: flex;
+	font-size: 1rem; /*16px шрифт 16/16*/
+	padding-right: 40px;
+	padding-left: calc(100% - 63vw);
+	/*63% посчитала сколько занимает блок с текстом для планшетных экранов*/
+ }
+
+ /*Цифра около заголовка GROWN - ATHLETE*/
+ .numeral_grown_athlete { 
+	 display: inline-block;
+	 vertical-align: super;
+	 margin-right: 25px;
+	 font-size: 1.125rem; /*18px шрифт 18/16*/
+	 border-bottom: 8px solid #efefef;
+ }
+ 
+ /*Цифра около заголовка GROWN-PLAYERS*/
+ .numeral_grown { 
+	 display: inline-block;
+	 vertical-align: super;
+	 margin-right: 25px;
+	font-size: 1.125rem; /*18px шрифт 18/16*/
+	 border-bottom: 8px solid #efefef;
+ }
+ 
+ /*Статья раздела секции Athlets */
+ .article_athlets {
+	width: 100vw;
+	margin-left: auto;
+	padding-bottom: 25px;
+ }
+
+/*добавила фон и цвет шрифта 3му элементу в секции*/
+.article_athlets:nth-child(3) {
+	background-color: #f5f4f9;
+	color: #000;
+}
+/*добавила фон и цвет шрифта 4му элементу в секции*/
+.article_athlets:nth-child(4) {
+	background-color: #5e42b0;
+	color: #fff;
 }
 
 .sport_basketball {
-	background-image: url(../images/basketballer_436.png);
+   max-width: 100vw;
+   font-size: 5rem; /*80px шрифт - 80/16*/
+   position: relative; /*чтобы баскетболист прижался к секции с заголовком */
+}
+
+/*Контейнер для картинки Баскетболиста*/
+.basketballer {
+	margin-left: calc(100% - 44vw); /*37% посчитала сколько занимает картинка с баскетболистом для планшетных экранов*/
+	position: absolute;
+	z-index: 5;
+	margin-left: auto;
+	top: 80px;
+    right: 0;
+ }
+
+/*Заголовок секции Баскетбол - PLAYERS*/
+.section_title_players {
+	padding-right: calc(100% - 56vw); /*56% посчитала сколько занимает блок с заголовком  для планшетных экранов*/
+	font-size: 5rem; /*80px шрифт - 80/16*/
+	padding-left: 40px;
+	padding-top: 85px;
+   }
+
+   /*Заголовок статьи CONNECTION, COLLABORATION, GROWTN*/
+   .article_title_players {
+	   display: inline-block;
+	   font-size: 2rem; /*Шрифт 32рх - 32/16*/
+	   padding-top: 40px;
+	   padding-bottom: 35px;
+	}
+
+ /*Контейнер для цифры и заголовка статьи*/
+.numeral_title_players {	
+	display: flex;
+	justify-content: flex-start;
+	padding-right: calc(100% - 56vw); /*56% посчитала сколько занимает блок с цифрой и заголовком для планшетных экранов*/
+	padding-left: 40px;
+}
+
+ /*Цифра около заголовка CONNECTION, COLLABORATION*/
+ .numeral_players {
+	display: inline-block;
+	vertical-align: super;
+	margin-right: 25px;
+	font-size: 1.125rem;
+   border-bottom: 8px solid #5e42b0;
+}
+ 
+/*Статья раздела секции Players */
+.article_players {
+	max-width: 100vw;
+	padding-bottom: 25px;
+}
+
+ /*Текст статьи*/
+.article_text_players {
+	font-size: 1rem; /*16px шрифт 16/16*/
+	padding-right: calc(100% - 56vw); /*56% посчитала сколько занимает блок с текстом для планшетных экранов*/
+	padding-left: 40px;
+}
+
+ /*добавила фон и цвет шрифта 4му элементу в секции*/
+.article_players:nth-child(4) {
+	background-color: #f5f4f9;
+	color: #000;
+}
+/*добавила фон и цвет шрифта 5му элементу в секции*/
+.article_players:nth-child(5) {
+	background-color: #090c35;
+	color: #fff;
 }
 
 .article_be_active {
-	background-image: url(../images/be-active_960.jpg);
+	width: 100vw;
 }
+
+/*Текст статьи*/
+.article_text_active {
+	font-size: 1rem; /*16px шрифт 16/16*/
+	display: inline-block; 
+	padding-left: 40px; /*чтобы все строки текста отодвинулись на 40 рх вправо*/
+	padding-bottom: 90px;
+	padding-right: 40px;
+
+ }
+
+/*Контейнер КВАДРАТ ФИОЛЕТОВЫЙ для Цифры около заголовков Be_active, Work it*/
+.numeral_active {
+ 	display: flex;
+ 	background-color: #5e42b0;
+ 	justify-content: center;
+ 	align-items: center;
+	position: absolute;
+	top: -50px; /*сместила квадрат вверх так - как по макету расположен*/
+	left: 50px; /*сместила квадрат влево так - как по макету расположен*/
+ 	width: 125px;
+ 	height: 125px;
+ }
+
+ /*Контейнер КВАДРАТ ФИОЛЕТОВЫЙ для Цифры около заголовкa Find contact*/
+ .numeral_contact {
+	  display: flex;
+	  background-color: #5e42b0;
+	  justify-content: center;
+	  align-items: center;
+	 position: absolute;
+	 top: -50px; /*сместила квадрат вверх так - как по макету расположен*/
+	 left: 50px; /*сместила квадрат влево так - как по макету расположен*/
+	  width: 125px;
+	  height: 125px;
+  }
+
+/*Цифра около заголовков Be_active, Find contact, Work it*/
+.numeral {
+   font-size: 1.5rem; /*24px шрифт 24/16*/
+   border-bottom: 8px solid #fafafa;
+}
+
+/*Заголовок статьи BE ACTIVE, FIND CONTACT, WORK IT*/
+.article_title_active {
+	text-align: left;
+ 	font-size: 5rem; /*Шрифт 80рх - 80/16*/
+    padding-top: 100px;
+	margin-bottom: 50px;
+	padding-left: 40px;  /*чтобы Заголовки сместились на 40 рх вправо*/
+ }
+
+ /*Цифра около заголовков Be_active, Find contact, Work it*/
+ .numeral {
+ 	font-size: 1.5rem; /*24px шрифт 24/16*/
+	border-bottom: 8px solid #fafafa;
+ }
+
+/*Фото перед BE ACTIVE*/
+.photo_be_active {
+	max-width: 100vw;
+}
+
+/*Статья FIND-CONTACT*/
 .article_find_contact {
-	background-image: url(../images/find-contact_960.jpg);
+	position: relative;
 }
-.article_work_it {
-	background-image: url(../images/work-it_960.jpg);
+
+/*Фото перед WORK IT*/
+.photo_work_it {
+   max-width: 100vw;
 }
+
+/*Статья WORK IT*/
+ .article_work_it {
+	position: relative;
+ }
+
 .footer {
 	background-image: url(../images/game_1280.jpg);
 }
+
+/*Логотип-стрелка для Футера*/
+.surface_logo {
+	height: 140px;
+	width: 140px;
+	padding: 35px 25px;
+	border-radius: 28px;
+	margin-top: 100px;
 }
 
+/*Заголовок футера - контейнер из 2х частей*/
+.title_footer {	
+    margin-top: 60px;
+    margin-bottom: 280px;
+}
 
-aaa@media (min-width: 961px) and (max-width: 1920px) {
+/*1я часть заголовка Футера*/
+.footer_title_one {
+font-size: 5rem; /*80px шрифт 80/16*/
+font-weight: 700;
+}
+
+/*2я часть заголовка Футера*/
+.footer_title_two {
+font-size: 2.25rem; /*36px шрифт 36/16*/
+font-weight: 400;
+}
+
+/*Логотип - стрелка с текстом для Футера*/
+.surface_logo_text_footer {
+	height: 60px;
+	width: 200px;
+	padding-top: 70px;
+	padding-bottom: 35px;
+}
+
+}
+
+/************************************************************************************************/
+
+/*Экраны от 961рх до 1920рх*/
+
+@media (min-width: 961px) and (max-width: 1920px) {
 
 .header {
 	background-image: url(../images/football_1920.jpg);
 	}
-	.sport_football {
-	background-image: url(../images/footballer_566.png);
-	
+
+/*Контейнер для двух строчек заголовка*/
+.title {
+	display: flex;
+	padding-bottom: 247px; /* нижний внутренний отступ между заголовком и ссылками*/
+   }
+   
+   h1 {
+	   font-size: 5.625rem; /*шрифт 90px -  90/16 */
+   }
+   
+   /*Две части заголовка шапки*/
+   .header_title_left {  /*h1*/
+	padding-left: 10vw; /*внутренний отступ слева*/
+   } 
+
+   .header_title_right { /*span*/
+	display: block;
+	text-align: right;
+	padding-right: 10vw; /*внутренний отступ слева*/
+   }
+   
+   /*Логотип*/
+	.surface_logo_text {
+	   height: 62px;
+	   width: 200px;
+	   margin-top: 55px;
+	   margin-bottom: 300px;
+   }
+   
+   /*Ссылки - общий контейнер*/
+   .links {
+	   flex-direction: row;
+	   justify-content: center;
+	   margin-bottom: 120px;
+	   margin-left: auto;
+	   margin-right: auto;
+   
+   } 
+   
+   /*Стилизация ссылки App Store как кнопка*/
+   .link_header_app {
+	   border-radius: 40px;
+	   margin-right: 60px; /*внешний отступ между кнопками*/
+	   height: 85px;
+	   width: 317px;
+   }
+   
+   /*Контейнер для текста ссылки App Store*/
+   .link_app {
+	   font-size: 0.875rem; /*14px шрифт 14/16*/
+	   margin-left: 33px;
+   }
+   
+   /*Части текста ссылки,т к разный шрифт - разделила на 2 части */
+   .link_text_one {
+	   font-weight: 400; /*Regular*/
+   }
+   
+   .link_text_two {
+	   font-weight: 700; /*Bold*/
+	   }
+   
+   /*Иконка App Store*/
+   .apple_svg {
+	   width: 50px;
+	   height: 55px;
+   }
+   
+   /*Стилизация ссылки Google Play как кнопка*/
+   .link_header_google {
+	   border-radius: 40px;
+	   height: 90px;
+	   width: 316px;
+   }
+   
+   /*Контейнер для текста ссылки Google Play*/
+   .link_google {
+	   font-size: 0.875rem; /*14px шрифт 14/16*/
+	   margin-left: 33px;
+   }
+   
+   /*Контейнер для Иконки Google Play*/
+   .google_svg {
+	   width: 50px;
+	   height: 55px;
+   }
+
+   .sport_football {
+	position: relative; /*чтобы футболист прижался к секции с заголовком */
+	max-width: 100vw;
+   }
+
+/*Статья раздела секции Athlets */
+.article_athlets {
+	width: 100%;
 }
+
+   /*Заголовок секции Футбол - ATHLETS*/
+   .section_title_athlets {
+	   font-size: 5rem; /*80px шрифт - 80/16*/
+	   position: relative; /*чтобы баскетболист прижался к секции с заголовком */
+	   padding-right: 10vw;
+	   padding-left: calc(100% - 50vw);
+	   padding-top: 120px;
+	   padding-bottom: 55px;
+  }
+   
+   /*Контейнер для картинки img Футболиста*/
+   .footballer {
+	   position: absolute;
+	   max-width: 100vw;
+	   left: 10vw;
+	   top: 200px;
+   }
+
+/*Заголовок статьи CONNECTION, COLLABORATION, GROWTN*/
+.article_title {
+	display: inline-block;
+	font-size: 2rem; /*Шрифт 32рх - 32/16*/
+	padding-top: 50px;
+	padding-bottom: 45px;
+ }
+
+/*Текст статьи*/
+.article_text {
+     font-size: 1.25rem; /*20px шрифт 20/16*/
+     display: inline-block; 
+	 max-width: 100%;
+	 padding-bottom: 60px;
+     padding-right: 10vw; 
+     padding-left: calc(100% - 50vw);
+}
+
+   /*Контейнер для цифры и заголовка статьи*/
+   .numeral_title {	
+	   padding-left: calc(100% - 50vw);
+	   text-align: left;
+   }
+   
+   /*Цифра около заголовка CONNECTION, COLLABORATION*/
+   .numeral_athlets { 
+	   display: inline-block;
+	   vertical-align: super;
+	   margin-right: 18px;
+	   font-size: 1.125rem; /*18px шрифт 18/16*/
+	   border-bottom: 9px solid #5e42b0;
+   }
+
+   /*Цифра около заголовка GROWN - ATHLETE*/
+.numeral_grown_athlete { 
+	display: inline-block;
+	vertical-align: super;
+	margin-right: 24px;
+	font-size: 1.125rem; /*18px шрифт 18/16*/
+	border-bottom: 9px solid #efefef;
+}
+
 .sport_basketball {
-	background-image: url(../images/basketballer_991.png);
+	max-width: 100vw;
+	position: relative; /*чтобы баскетболист прижался к секции с заголовком */
+ }
+
+/*Контейнер для картинки Баскетболиста*/
+.basketballer {
+	max-width: 100vw;
+	position: absolute;
+	z-index: 5;
+	top: 200px;
+	right: 100px;
+ }
+ 
+/*Заголовок секции Баскетбол - PLAYERS*/
+.section_title_players {
+	font-size: 5rem; /*80px шрифт - 80/16*/
+	padding-left: 10vw;
+	padding-top: 115px;
+	padding-bottom: 55px;
+   }
+
+/*Статья раздела секции Players */
+.article_players {
+	padding-bottom: 60px;
+   }
+
+/*Контейнер для цифры и заголовка статьи*/
+.numeral_title_players {	
+	padding-left: 10vw;
+	text-align: left;
 }
+
+	/*Цифра около заголовка CONNECTION, COLLABORATION*/
+	.numeral_players {
+		display: inline-block;
+		vertical-align: super;
+		margin-right: 18px;
+		font-size: 1.125rem; /*18px*/
+	    border-bottom: 9px solid #5e42b0;
+	}
+
+/*добавила фон и цвет шрифта 3му элементу в секции*/
+.article_athlets:nth-child(3) {
+	background-color: #f5f4f9;
+	color: #000;
+}
+/*добавила фон и цвет шрифта 4му элементу в секции*/
+.article_athlets:nth-child(4) {
+	background-color: #5e42b0;
+	color: #fff;
+}
+
+    /*Цифра около заголовка GROWN*/
+	.numeral_grown { 
+		display: inline-block;
+		vertical-align: super;
+		margin-right: 18px;
+	    font-size: 1.125rem; /*18px шрифт 18/16*/
+		border-bottom: 9px solid #ffffff;
+	}
+	
+	/*Текст статьи*/
+   .article_text_players {
+	   font-size: 1.25rem; /*20px шрифт 20/16*/
+	   display: inline-block; 
+	   text-align: left;
+	   padding-right: calc(100% - 50vw);
+	   padding-left: 10vw;
+   }
+
+ /*добавила фон и цвет шрифта 4му элементу в секции*/
+.article_players:nth-child(4) {
+	background-color: #f5f4f9;
+	color: #000;
+}
+/*добавила фон и цвет шрифта 5му элементу в секции*/
+.article_players:nth-child(5) {
+	background-color: #090c35;
+	color: #fff;
+}
+
+   /*Заголовок статьи CONNECTION, COLLABORATION, GROWTN*/
+   .article_title_players {
+	   display: inline-block;
+	   font-size: 2rem; /*Шрифт 32рх - 32/16*/
+	   padding-top: 45px;
+	   padding-bottom: 45px;
+	}
+   
+	.sport_active {
+		max-width: 100vw;
+	}
+	
+.photo_and_article {
+    display: flex;
+	flex-direction: row;
+	max-width: 100%;
+	box-sizing: border-box;
+}
+
+.photo {
+    max-width: 50%;
+}
+
+/*Статья BE_ACTIVE*/
 .article_be_active {
-	background-image: url(../images/be-active_1024.jpg);
+	position: relative;
+	max-width: 50%;
 }
-.article_find_contact {
-	background-image: url(../images/find-contact_1024.jpg);
+
+   /*Текст статьи*/
+   .article_text_active {
+	   font-size: 1.5rem; /*24px шрифт 24/16*/
+       display: inline-block;
+	   padding-left: 140px; /*чтобы все строки текста отодвинулись на 140 рх вправо*/
+	   padding-right: 10vw;
+	   padding-bottom: 90px;
+	}
+   
+   /*Контейнер ПРЯМОУГОЛЬНИК ФИОЛЕТОВЫЙ для Цифры около заголовков Be_active, Work it*/
+   .numeral_active {
+	   display: flex;
+	   background-color: #5e42b0;
+	   justify-content: center;
+	   align-items: center;
+	   position: absolute;
+	   top: 220px; /*сместила прямоугольник вверх так - как по макету расположен*/
+	   left: -89px; /*сместила прямоугольник влево так (50% его ширины - 178/2=89px) - как по макету расположен*/
+	   width: 168px;
+	   height: 178px;
+	}
+
+/*Контейнер ПРЯМОУГОЛЬНИК ФИОЛЕТОВЫЙ для Цифры около заголовкa Find contact*/
+.numeral_contact {
+	display: flex;
+	background-color: #5e42b0;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 220px; /*сместила прямоугольник вверх так - как по макету расположен*/
+	right: -89px; /*сместила прямоугольник вправо так (50% его ширины - 178/2=89px) - как по макету расположен*/
+	width: 168px;
+	height: 178px;
+ }
+
+   /*Цифра около заголовков Be_active, Find contact, Work it*/
+   .numeral {
+	  font-size: 1.5rem; /*24px шрифт 24/16*/
+	  border-bottom: 9px solid #fafafa;
+   }
+   
+   /*Заголовок статьи BE ACTIVE, FIND CONTACT, WORK IT*/
+   .article_title_active {
+	   text-align: left;
+	   font-size: 5rem; /*Шрифт 80рх - 80/16*/
+	   padding-top: 100px;
+	   margin-bottom: 50px;
+	   padding-left: 140px;  /*чтобы Заголовки сместились на 140 рх вправо*/
+	}
+
+   /*Статья FIND-CONTACT*/
+   .article_find_contact {
+	   position: relative;
+	   max-width: 50%;
+   }
+
+   .photo_and_article_contact {
+    display: flex;
+	flex-direction: row-reverse;
+	max-width: 100%;
 }
+
+/*Статья WORK IT*/
 .article_work_it {
-	background-image: url(../images/work-it_1024.jpg);
-}
+	position: relative;
+	max-width: 50%;
+ }
+ 
+   /*Логотип-стрелка для Футера*/
+   .surface_logo {
+	   display: inline-block;
+	   vertical-align: super;
+	   margin-right: 45px;
+	   height: 150px;
+	   width: 150px;
+	   padding: 35px 30px;
+	   border-radius: 34px;
+	   margin-left: 10vw;
+   }
+   
+   /*Заголовок футера - контейнер из 2х частей*/
+   .title_footer {	
+	   display: inline-block;
+	   text-align: center;
+	   margin-top: 160px;
+	   margin-bottom: 280px;
+   }
+   
+   /*1я часть заголовка Футера*/
+   .footer_title_one {
+   font-size: 5rem; /*80px шрифт 80/16*/
+   font-weight: 700;
+   }
+   
+   /*2я часть заголовка Футера*/
+   .footer_title_two {
+   font-size: 2.25rem; /*36px шрифт 36/16*/
+   font-weight: 400;
+   }
+   
+   .logo_and_title {
+	   display: block;
+	   margin-left: auto;
+	   margin-right: auto;
+   }
+
+   /*Логотип - стрелка с текстом для Футера*/
+   .surface_logo_text_footer {
+	   height: 70px;
+	   width: 215px;
+	   padding-top: 260px;
+	   padding-bottom: 60px;
+   }
+
 .footer {
 	background-image: url(../images/game_1920.jpg);
+}
 }
 
