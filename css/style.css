@@ -299,6 +299,13 @@ h1 {
     font-weight: 400; /*regular*/
  }
 
+ /*Текст статьи*/
+ .article_text_contact {
+	font-family: OpenSans, Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 400; /*regular*/
+ }
+
 /*Цифра около заголовков Be_active, Find contact, Work it*/
 .numeral {
    font-family: OpenSans, Roboto, sans-serif;
@@ -310,11 +317,11 @@ h1 {
 
 /*Статья BE ACTIVE*/
 .article_be_active {
-	max-width: 100%;
+	aaaamax-width: 100%;
 	position: relative;
   }
  
- /*Заголовок статьи BE ACTIVE, FIND CONTACT, WORK IT*/
+ /*Заголовок статьи BE ACTIVE, WORK IT*/
  .article_title_active {
 	 font-family: OpenSans, Roboto, sans-serif;
 	 font-style: normal;
@@ -322,8 +329,17 @@ h1 {
 	 text-transform: uppercase;
 	 color: #c1c1c1;
   }
+
+  /*Заголовок статьи FIND CONTACT*/
+ .article_title_contact {
+	font-family: OpenSans, Roboto, sans-serif;
+	font-style: normal;
+	font-weight: 700; /*bold*/
+	text-transform: uppercase;
+	color: #c1c1c1;
+ }
  
-  /*Контейнер ФИОЛЕТОВЫЙ КВАДРАТ или ПРЯМОУГОЛЬНИК для Цифры около заголовков Be_active, Find contact, Work it*/
+  /*Контейнер ФИОЛЕТОВЫЙ КВАДРАТ или ПРЯМОУГОЛЬНИК для Цифры около заголовков Be_active, Work it*/
  .numeral_active {
 	  display: flex;
 	  background-color: #5e42b0;
@@ -331,6 +347,15 @@ h1 {
 	  align-items: center;
 	  position: absolute;
   }
+
+  /*Контейнер ФИОЛЕТОВЫЙ КВАДРАТ или ПРЯМОУГОЛЬНИК для Цифры около заголовкa Find contact*/
+ .numeral_contact {
+	display: flex;
+	background-color: #5e42b0;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+}
  
   /*Цифра около заголовков Be_active, Find contact, Work it*/
   .numeral {
@@ -658,12 +683,12 @@ h1 {
 	background-color: #f5f4f9;
 	color: #000;
 }
+
 /*добавила фон и цвет шрифта 5му элементу в секции*/
 .article_players:nth-child(5) {
 	background-color: #090c35;
 	color: #fff;
 }
-
 
 /*Текст статьи*/
 .article_text_players {
@@ -678,7 +703,6 @@ h1 {
 	top: 120px; /*Сместила картинку вниз на 120рх*/
 	left: calc((100% - 302px)/2); /*302px это ширина картинки , баскетболиста, чтобы посередине 
 	расположен был составила такую формулу */
- 	
  }
 
  /*добавила фон и цвет шрифта 3му элементу в секции*/
@@ -692,6 +716,7 @@ h1 {
 	background-color: #f5f4f9;
 	color: #000;
 }
+
 /*добавила фон и цвет шрифта 5му элементу в секции*/
 .article_players:nth-child(5) {
 	background-color: #090c35;
@@ -709,20 +734,26 @@ h1 {
 	 display: inline-block;
 	vertical-align: super;
  	font-size: 0.875rem;
-	font-family: OpenSans, Roboto, sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #000000;
 	border-bottom: 7px solid #5e42b0;
 	margin-right: 10px;
  }
 
-/*Фото перед FIND-CONTACT*/
+/*Фото перед FIND CONTACT*/
 .photo_find_contact {
-	max-width: 100vw;
+	display: block;
+	max-width: 100%;
 }
 
+/*Фото перед BE ACTIVE */
+.photo_be_active {
+	display: block;
+	max-width: 100%;
+}
+/*Фото перед WORK IT*/
+.photo_work_it {
+	display: block;
+	max-width: 100%;
+}
 
 /*Статья BE ACTIVE*/
 .article_be_active {
@@ -732,20 +763,38 @@ h1 {
    padding-left: 30px;
  }
 
-/*Заголовок статьи BE ACTIVE, FIND CONTACT, WORK IT*/
+/*Заголовок статьи BE ACTIVE, WORK IT*/
 .article_title_active {
  	font-size: 1.44rem; /*Шрифт 23рх - 23/16*/
-	font-family: OpenSans, Roboto, sans-serif;
-    font-style: normal;
-    font-weight: 700; /*bold*/
-    text-transform: uppercase;
-    color: #c1c1c1;
     padding-top: 40px;
     margin-bottom: 35px;
     padding-left: 30px;
  }
 
- /*Контейнер для Цифры около заголовков Be_active, Find contact, Work it*/
+ /*Заголовок статьи FIND CONTACT*/
+.article_title_contact {
+	font-size: 1.44rem; /*Шрифт 23рх - 23/16*/
+    padding-top: 40px;
+    margin-bottom: 35px;
+    padding-left: 30px;
+}
+
+
+/*Текст статьи*/
+.article_text_active {
+	font-size: 0.94rem; /*15px шрифт 15/16*/
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+/*Текст статьи*/
+.article_text_contact {
+	font-size: 0.94rem; /*15px шрифт 15/16*/
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+ /*Контейнер для Цифры около заголовков Be_active, Work it*/
 .numeral_active {
 	top: -50px; /*сместила квадрат вверх так - как по макету расположен*/
 	left: 20px; /*сместила квадрат влево так - как по макету расположен*/
@@ -753,7 +802,7 @@ h1 {
  	height: 70px;
  }
 
- /*Контейнер для Цифры около заголовков Be_active, Find contact, Work it*/
+ /*Контейнер для Цифры около заголовка Find contact*/
 .numeral_contact {
 	top: -50px; /*сместила квадрат вверх так - как по макету расположен*/
 	left: 20px; /*сместила квадрат влево так - как по макету расположен*/
@@ -1119,6 +1168,15 @@ h1 {
 	padding-left: 40px; /*чтобы все строки текста отодвинулись на 40 рх вправо*/
 	padding-bottom: 90px;
 	padding-right: 40px;
+ }
+
+ /*Текст статьи*/
+.article_text_contact {
+	font-size: 1rem; /*16px шрифт 16/16*/
+	display: inline-block; 
+	padding-left: 40px; /*чтобы все строки текста отодвинулись на 40 рх вправо*/
+	padding-bottom: 90px;
+	padding-right: 40px;
 
  }
 
@@ -1154,8 +1212,17 @@ h1 {
    border-bottom: 8px solid #fafafa;
 }
 
-/*Заголовок статьи BE ACTIVE, FIND CONTACT, WORK IT*/
+/*Заголовок статьи BE ACTIVE, WORK IT*/
 .article_title_active {
+	text-align: left;
+ 	font-size: 5rem; /*Шрифт 80рх - 80/16*/
+    padding-top: 100px;
+	margin-bottom: 50px;
+	padding-left: 40px;  /*чтобы Заголовки сместились на 40 рх вправо*/
+ }
+
+/*Заголовок статьи FIND CONTACT*/
+.article_title_contact {
 	text-align: left;
  	font-size: 5rem; /*Шрифт 80рх - 80/16*/
     padding-top: 100px;
@@ -1171,8 +1238,15 @@ h1 {
 
 /*Фото перед BE ACTIVE*/
 .photo_be_active {
+	display: block;
 	max-width: 100vw;
 }
+
+/*Фото перед FIND CONTACT*/
+.photo_contact {
+	display: block;
+	max-width: 100vw;
+ }
 
 /*Статья FIND-CONTACT*/
 .article_find_contact {
@@ -1181,6 +1255,7 @@ h1 {
 
 /*Фото перед WORK IT*/
 .photo_work_it {
+   display: block;
    max-width: 100vw;
 }
 
@@ -1343,7 +1418,7 @@ font-weight: 400;
 	   position: relative; /*чтобы баскетболист прижался к секции с заголовком */
 	   padding-right: 10vw;
 	   padding-left: calc(100% - 50vw);
-	   padding-top: 120px;
+	   padding-top: 100px;
 	   padding-bottom: 55px;
   }
    
@@ -1415,7 +1490,7 @@ font-weight: 400;
 .section_title_players {
 	font-size: 5rem; /*80px шрифт - 80/16*/
 	padding-left: 10vw;
-	padding-top: 115px;
+	padding-top: 100px;
 	padding-bottom: 55px;
    }
 
@@ -1490,16 +1565,29 @@ font-weight: 400;
 	.sport_active {
 		max-width: 100vw;
 	}
-	
+
+/*Сделала контейнер для BE ACTIVE, WORK IT , чтобы расположить фото и статью горизонтально*/
 .photo_and_article {
     display: flex;
 	flex-direction: row;
 	max-width: 100%;
-	box-sizing: border-box;
+}
+img {
+	display: block;
 }
 
 .photo {
-    max-width: 50%;
+	max-width: 50%;
+	
+}
+.photo_contact {
+	max-width: 50%;
+
+}
+
+.photo_work {
+	max-width: 50%;
+
 }
 
 /*Статья BE_ACTIVE*/
@@ -1508,14 +1596,29 @@ font-weight: 400;
 	max-width: 50%;
 }
 
+ /*Цифра около заголовков Be_active, Find contact, Work it*/
+ .numeral {
+	font-size: 1.5rem; /*24px шрифт 24/16*/
+	border-bottom: 9px solid #fafafa;
+ }
+
    /*Текст статьи*/
    .article_text_active {
 	   font-size: 1.5rem; /*24px шрифт 24/16*/
        display: inline-block;
-	   padding-left: 140px; /*чтобы все строки текста отодвинулись на 140 рх вправо*/
+	   padding-left: 7vw; /*чтобы все строки текста отодвинулись на 140 рх влево*/
 	   padding-right: 10vw;
 	   padding-bottom: 90px;
 	}
+
+	/*Текст статьи*/
+	.article_text_contact {
+		font-size: 1.5rem; /*24px шрифт 24/16*/
+		display: inline-block;
+		padding-right: 7vw; /*чтобы все строки текста отодвинулись на 140 рх вправо*/
+		padding-left: 10vw;
+		padding-bottom: 90px;
+	 }
    
    /*Контейнер ПРЯМОУГОЛЬНИК ФИОЛЕТОВЫЙ для Цифры около заголовков Be_active, Work it*/
    .numeral_active {
@@ -1542,32 +1645,37 @@ font-weight: 400;
 	width: 168px;
 	height: 178px;
  }
-
-   /*Цифра около заголовков Be_active, Find contact, Work it*/
-   .numeral {
-	  font-size: 1.5rem; /*24px шрифт 24/16*/
-	  border-bottom: 9px solid #fafafa;
-   }
    
-   /*Заголовок статьи BE ACTIVE, FIND CONTACT, WORK IT*/
+   /*Заголовок статьи BE ACTIVE, WORK IT*/
    .article_title_active {
-	   text-align: left;
-	   font-size: 5rem; /*Шрифт 80рх - 80/16*/
-	   padding-top: 100px;
-	   margin-bottom: 50px;
-	   padding-left: 140px;  /*чтобы Заголовки сместились на 140 рх вправо*/
-	}
+	text-align: left;
+	font-size: 5rem; /*Шрифт 80рх - 80/16*/
+	padding-top: 250px;
+	padding-bottom: 130px;
+	padding-left: 7vw;  /*чтобы Заголовки сместились на 140 рх вправо*/
+ }
 
-   /*Статья FIND-CONTACT*/
-   .article_find_contact {
-	   position: relative;
-	   max-width: 50%;
-   }
+/*Заголовок статьи FIND CONTACT*/
+.article_title_contact {
+	text-align: left;
+	font-size: 5rem; /*Шрифт 80рх - 80/16*/
+	padding-top: 250px;
+	padding-bottom: 130px;
+	padding-right: 7vw;  /*чтобы Заголовки сместились на 140 рх влево*/
+	padding-left: 10vw;  /*чтобы Заголовки сместились на 200 рх вправо*/
+ }
 
+/*Сделала контейнер для FIND CONTACT, чтобы расположить фото и статью горизонтально и в обратном направлении*/
    .photo_and_article_contact {
     display: flex;
 	flex-direction: row-reverse;
 	max-width: 100%;
+}
+
+ /*Статья FIND-CONTACT*/
+ .article_find_contact {
+	position: relative;
+	max-width: 50%;
 }
 
 /*Статья WORK IT*/
