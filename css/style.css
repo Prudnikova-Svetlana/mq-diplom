@@ -1015,7 +1015,7 @@ h1 {
 
 /*Заголовок секции Баскетбол - PLAYERS*/
 .section_title_players {
-	padding-right: 52%; /*Посчитала сколько заголовок для планшетов 400рх=52%=400*100/768рх*/
+	padding-right: 52%; /*Посчитала сколько заголовок для планшетной версии 400рх=52%=400*100/768рх*/
 	font-size: 5rem; /*80px шрифт - 80/16*/
 	padding-left: 5.2%;
 	padding-top: 85px;
@@ -1100,8 +1100,8 @@ h1 {
  	justify-content: center;
  	align-items: center;
 	position: absolute;
-	top: -50px; /*сместила квадрат вверх так - как по макету расположен*/
-	left: 5.2%; /*сместила квадрат влево так - как по макету расположен*/
+	top: -50px; /*сместила прямоугольник вверх так - как по макету расположен*/
+	left: 5.2%; /*сместила прямоугольник влево так - как по макету расположен*/
  	width: 120px;
  	height: 125px;
  }
@@ -1229,9 +1229,9 @@ font-weight: 400;
 
 /************************************************************************************************/
 
-/*Экраны от 961рх до 1920рх и Экраны больше 1920 рх*/ 
+/*Экраны от 961рх */ 
 
-@media (min-width: 961px) and (max-width: 1920px), (min-width: 1921px) {
+@media (min-width: 961px) {
 
 .header {
 	background-image: url(../images/football_1920.jpg);
@@ -1333,7 +1333,6 @@ font-weight: 400;
    .section_title_athlets {
 	   width: 38.5%;
 	   font-size: 5rem; /*80px шрифт - 80/16*/
-	   position: relative; /*чтобы баскетболист прижался к секции с заголовком */
 	   padding-right: 10%;
 	   padding-left: 51.5%;
 	   padding-top: 100px;
@@ -1344,7 +1343,7 @@ font-weight: 400;
    .footballer {
 	   position: absolute;
 	   right: 50%;
-	   top: 40px;
+	   top: 70px;
 	   
    }
 
@@ -1388,7 +1387,7 @@ font-weight: 400;
 .numeral_grown_athlete { 
 	display: inline-block;
 	vertical-align: super;
-	margin-right: 24px;
+	margin-right: 18px;
 	font-size: 1.125rem; /*18px шрифт 18/16*/
 	border-bottom: 9px solid #efefef;
 }
@@ -1413,8 +1412,8 @@ font-weight: 400;
 .basketballer {
 	position: absolute;
 	z-index: 5;
-	top: 40px;
-	left: 50%;
+	top: 35px;
+	left: 42%;
  }
  
 /*Заголовок секции Баскетбол - PLAYERS*/
@@ -1428,7 +1427,7 @@ font-weight: 400;
 
 /*Статья раздела секции Players */
 .article_players {
-	padding-bottom: 60px;
+	padding-bottom: 55px;
    }
 
 /*Контейнер для цифры и заголовка статьи*/
@@ -1504,7 +1503,7 @@ font-weight: 400;
 
 /*Картинка фото  в разделе  BE ACTIVE*/
 .photo_be_active {
-	max-width: 100%; /*для того, чтобы картинка заняла нужный размер родительского блока*/
+	width: 100%; /*для того, чтобы картинка заняла нужный размер родительского блока*/
 	display: block;
 	height: 100%;
     object-fit: cover;
@@ -1534,6 +1533,7 @@ font-weight: 400;
 
 /*Текст статьи*/
 .article_text_active {
+	flex-shrink: 0;
 	font-size: 1.5rem; /*24px шрифт 24/16*/
 	padding-left: 21%; /*чтобы все строки текста отодвинулись на 140 рх влево*/
 	padding-right: 10%;
@@ -1546,7 +1546,7 @@ font-weight: 400;
 
  /*КАртинка фото в разделе FIND CONTACT*/
  .photo_find_contact {
-	max-width: 100%;
+	width: 100%;
 	display: block;
 	height: 100%; /*Чтобы картинка заняла всю площадь по высоте*/
     object-fit: cover;
@@ -1562,7 +1562,7 @@ font-weight: 400;
 	.article_text_contact {
 		font-size: 1.5rem; /*24px шрифт 24/16*/
 		padding-right: 21%; /*чтобы все строки текста отодвинулись на 140 рх вправо*/
-		padding-left: 10%;
+		padding-left: 20%;
 		padding-bottom: 90px;
 		flex-shrink: 0;
 	 }
@@ -1585,7 +1585,7 @@ font-weight: 400;
 	font-size: 5rem; /*Шрифт 80рх - 80/16*/
 	padding-top: 250px;
 	padding-bottom: 100px;
-	padding-left: 10%;  /*чтобы Заголовки сместились на 200 рх вправо*/
+	padding-left: 20%;  /*чтобы Заголовки сместились на 200 рх вправо*/
 	padding-right: 5%;
  }
 
@@ -1617,7 +1617,7 @@ font-weight: 400;
 
 /*КАртинка фото в разделе WORK IT*/
 .photo_work_it {
-	max-width: 100%;  /*для того, чтобы картинка заняла нужный размер блока*/
+	width: 100%;  /*для того, чтобы картинка заняла нужный размер блока*/
 	display: block;
 	height: 100%;
     object-fit: cover;
@@ -1631,11 +1631,6 @@ font-weight: 400;
 	   margin-right: 40px;
 	   
    }
-
-   /*Заголовок футера - контейнер из 2х частей*/
-   .title_footer {	
-	flex-shrink: 0;
-   }
    
    /*1я часть заголовка Футера*/
    .footer_title_one {
@@ -1647,6 +1642,7 @@ font-weight: 400;
    .footer_title_two {
    font-size: 2.25rem; /*36px шрифт 36/16*/
    font-weight: 400;
+   padding-bottom: 20px;
    }
    
    /*Сделала контейнер для логотипа и заголовка, чтобы расположить по центру футера*/
@@ -1674,5 +1670,223 @@ font-weight: 400;
 
 }
 
+/****************************************************************************/
 
+@media (min-width: 1921px) {
 
+h1 {
+	font-size: 6.5rem; /*шрифт 104px -  104/16 */
+}
+
+/*Две части заголовка шапки*/
+.header_title_left {  /*h1*/
+ padding-left: 15%; /*внутренний отступ слева*/
+} 
+
+.header_title_right { /*span*/
+ padding-right: 15%; /*внутренний отступ справа*/
+}
+
+/*Логотип*/
+ .surface_logo_text {
+	height: 90px;
+	width: 270px;
+	margin-top: 80px;
+	margin-bottom: 350px;
+}
+
+/*Стилизация ссылки App Store как кнопка*/
+.link_header_app {
+	border-radius: 48px;
+	margin-right: 3%; /*внешний отступ между кнопками*/
+	height: 110px;
+	width: 450px;
+}
+
+/*Контейнер для текста ссылки App Store*/
+.link_app {
+	font-size: 1rem; /*16px шрифт 16/16*/
+	margin-left: 40px;
+}
+
+/*Иконка App Store*/
+.apple_svg {
+	width: 60px;
+	height: 65px;
+}
+
+/*Стилизация ссылки Google Play как кнопка*/
+.link_header_google {
+	border-radius: 48px;
+	height: 110px;
+	width: 450px;
+}
+
+/*Контейнер для текста ссылки Google Play*/
+.link_google {
+	font-size: 1rem; /*16px шрифт 16/16*/
+	margin-left: 40px;
+}
+
+/*Контейнер для Иконки Google Play*/
+.google_svg {
+	width: 55px;
+	height: 60px;
+}
+
+ /*Заголовок секции Футбол - ATHLETS*/
+ .section_title_athlets {
+	font-size: 5.625rem; /*90px шрифт - 90/16*/
+	padding-top: 130px;
+	padding-bottom: 30px;
+}
+
+/*Контейнер для картинки img Футболиста*/
+.footballer {
+	right: 60%;
+	top: 150px;
+}
+
+/*Заголовок статьи CONNECTION, COLLABORATION, GROWTN*/
+.article_title {
+	font-size: 2.5rem; /*Шрифт 40рх - 40/16*/
+	padding-top: 50px;
+	padding-bottom: 50px;
+ }
+
+/*Текст статьи*/
+.article_text {
+     font-size: 1.5rem; /*24px шрифт 24/16*/
+	 
+}
+
+/*Цифра около заголовка CONNECTION, COLLABORATION*/
+.numeral_athlets { 
+	margin-right: 19px;
+	font-size: 1.25rem; /*20px шрифт 20/16*/
+
+}
+
+/*Цифра около заголовка GROWN - ATHLETE*/
+.numeral_grown_athlete { 
+    margin-right: 19px;
+    font-size: 1.25rem; /*20px шрифт 20/16*/
+}
+
+/*Контейнер для картинки Баскетболиста*/
+.basketballer {
+	top: 80px;
+	left: 50%;
+ }
+
+/*Заголовок секции Баскетбол - PLAYERS*/
+.section_title_players {
+	font-size: 5.625rem; /*90px шрифт - 90/16*/
+	padding-top: 130px;
+	padding-bottom: 30px;
+   }
+
+/*Заголовок статьи CONNECTION, COLLABORATION, GROWTN*/
+.article_title_players {
+	font-size: 2.5rem; /*Шрифт 40рх - 40/16*/
+	padding-top: 50px;
+	padding-bottom: 50px;
+ }
+
+	/*Цифра около заголовка CONNECTION, COLLABORATION*/
+	.numeral_players {
+		margin-right: 19px;
+		font-size: 1.25rem; /*20px*/
+	}
+
+    /*Цифра около заголовка GROWN*/
+	.numeral_grown { 
+		margin-right: 19px;
+	    font-size: 1.25rem; /*20px шрифт 20/16*/
+	}
+	
+	/*Текст статьи*/
+   .article_text_players {
+	   font-size: 1.5rem; /*24px шрифт 24/16*/
+   }
+
+/*Заголовок статьи BE ACTIVE, WORK IT*/
+.article_title_active {
+	font-size: 5.625rem; /*Шрифт 90рх - 90/16*/
+	padding-top: 250px;
+	padding-bottom: 100px;
+ }
+
+  /*Контейнер ПРЯМОУГОЛЬНИК ФИОЛЕТОВЫЙ для Цифры около заголовков Be_active, Work it*/
+  .numeral_active {
+	top: 225px; /*сместила прямоугольник вверх так - как по макету расположен*/
+	left: -90px; /*сместила прямоугольник влево так (50% его ширины - 180/2=90px) - как по макету расположен*/
+	width: 176px;
+	height: 180px;
+ }
+
+/*Текст статьи*/
+.article_text_active {
+	font-size: 1.5rem; /*24px шрифт 24/16*/
+	padding-bottom: 90px;
+ }
+
+/*Текст статьи*/
+.article_text_contact {
+	font-size: 1.5rem; /*24px шрифт 24/16*/
+	padding-right: 21%; /*чтобы все строки текста отодвинулись на 140 рх вправо*/
+	padding-left: 10%;
+	padding-bottom: 90px;
+	flex-shrink: 0;
+ }
+
+/*Контейнер ПРЯМОУГОЛЬНИК ФИОЛЕТОВЫЙ для Цифры около заголовкa Find contact*/
+.numeral_contact {
+    top: 225px; /*сместила прямоугольник вверх так - как по макету расположен*/
+    right: -90px; /*сместила прямоугольник вправо так (50% его ширины - 180/2=90px) - как по макету расположен*/
+    width: 176px;
+    height: 180px;
+}
+
+/*Заголовок статьи FIND CONTACT*/
+.article_title_contact {
+    font-size: 5.625rem; /*Шрифт 90рх - 90/16*/
+    padding-top: 250px;
+    padding-bottom: 100px;
+}
+
+/*Логотип-стрелка для Футера*/
+.surface_logo {
+	height: 180px;
+	width: 180px;
+	padding: 40px 35px;
+	border-radius: 40px;
+	margin-right: 55px;	
+}
+
+/*1я часть заголовка Футера*/
+.footer_title_one {
+   font-size: 6.5rem; /*104px шрифт 104/16*/
+   
+}
+
+/*2я часть заголовка Футера*/
+.footer_title_two {
+   font-size: 3rem; /*48px шрифт 48/16*/
+}
+
+/*Сделала контейнер для логотипа и заголовка, чтобы расположить по центру футера*/
+.logo_and_title {
+	padding-top: 190px;
+	padding-bottom: 320px;
+}
+
+/*Логотип - стрелка с текстом для Футера*/
+.surface_logo_text_footer {
+	height: 90px;
+	width: 270px;
+	padding-top: 290px;
+	padding-bottom: 100px;
+}
+
+}
